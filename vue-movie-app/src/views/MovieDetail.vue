@@ -1,8 +1,9 @@
 <template>
   <div class="movie-detail">
     <h2>{{movie.Title}}</h2>
-    <p>{{ movie.Year }}</p>
+    <p>Year: {{ movie.Year }}</p>
     <img :src="movie.Poster" alt="Movie Poster" class="featured-img" />
+    <p>Sinopse:</p> <br>
     <p>{{ movie.Plot }}</p>
   </div>
 </template>
@@ -40,19 +41,25 @@ export default {
     color: #FFF;
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  img {
+    align-items: center;
   }
   .featured-img {
     display: block;
-    max-width: 200px;
+    max-width: 100%;
+    margin-left: 20px;
     margin-bottom: 16px;
-    align-items: right;
-    
+    align-items: center;    
   }
   p {
     color: #FFF;
     font-size: 18px;
     line-height: 1.4;
+    text-align: justify;
+    margin-right: 5px;
   }
 }
 </style>
